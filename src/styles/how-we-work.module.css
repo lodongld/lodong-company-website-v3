@@ -1,0 +1,4 @@
+.image {
+  @apply w-full rounded-tr-[3.5rem] rounded;
+  transform: scaleX(-1);
+}

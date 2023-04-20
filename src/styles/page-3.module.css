@@ -1,0 +1,4 @@
+.photo {
+  @apply w-full rounded-tl-[3.5rem] rounded;
+  filter: grayscale();
+}
