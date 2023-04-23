@@ -1,27 +1,10 @@
 import React, { FunctionComponent } from "react";
+import Image from "next/image";
 import { Element } from "react-scroll";
 import styles from "./../styles/landing.module.css";
+import Photo from "./../img/team-looking-busy.jpg";
 
 export const LandingPage: FunctionComponent = (): JSX.Element => {
-  const [isInView, setIsInView] = React.useState<boolean>(true);
-
-  React.useEffect(() => {
-    const target = document.querySelector("[name='home']");
-
-    const targetPosition = target?.getBoundingClientRect();
-
-    if (targetPosition) {
-      const isVisible = targetPosition.top >= 0 &&
-        targetPosition.left >= 0 &&
-        targetPosition.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        targetPosition.right <= (window.innerWidth || document.documentElement.clientWidth);
-
-      console.log(isVisible);
-
-      setIsInView(isVisible);
-    }
-  }, [isInView]);
-
   return (
     <Element name={"home"} className={`${styles.landing}`}>
       <div className="grid justify-between w-full h-screen grid-cols-1 grid-rows-3">
@@ -33,10 +16,10 @@ export const LandingPage: FunctionComponent = (): JSX.Element => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center row-span-1 row-start-3 px-20 bg-opacity-50 gap-y-3 bg-neutral-900">
-          <h1 className="text-4xl font-bold text-white">We Develop Innovative</h1>
-          <h1 className="text-4xl font-bold text-gray-500">Digital Solutions</h1>
-          <h1 className="text-4xl font-bold text-white">Enhancing User Experience</h1>
+        <div className="flex flex-col justify-center row-span-1 row-start-3 px-10 bg-opacity-50 lg:px-5 gap-y-3 bg-neutral-900">
+          <h1 className="font-bold text-white lg:text-4xl">We Develop Innovative</h1>
+          <h1 className="font-bold text-gray-500 lg:text-4xl">Digital Solutions</h1>
+          <h1 className="font-bold text-white lg:text-4xl">Enhancing User Experience</h1>
         </div>
       </div>
     </Element>

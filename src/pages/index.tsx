@@ -6,8 +6,18 @@ import { HowWeWork } from "@/components/HowWeWork";
 import { PageTwo } from "@/components/PageTwo";
 import { PageThree } from "@/components/PageThree";
 import { PageFour } from "@/components/PageFour";
+import { PageFive } from "@/components/PageFive";
+import { PageSix } from "@/components/PageSix";
+import { PageSeven } from "@/components/PageSeven";
+import { PageEight } from "@/components/PageEight";
+import { Footer } from "@/components/Footer";
+import AOS from "aos";
 
 const Home: FunctionComponent = (): JSX.Element => {
+  React.useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <Fragment>
       <Head>
@@ -28,6 +38,16 @@ const Home: FunctionComponent = (): JSX.Element => {
       <PageThree />
 
       <PageFour />
+
+      <PageFive />
+
+      <PageSix />
+
+      <PageSeven />
+
+      <PageEight />
+
+      <Footer />
     </Fragment >
   );
 };

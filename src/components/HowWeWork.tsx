@@ -37,7 +37,7 @@ export const HowWeWork: FunctionComponent = (): JSX.Element => {
 
       <div className="col-span-8">
         <div className="image-container">
-          <Image src={HowWeWorkImage} alt={"how_we_work.jpg"} className={styles.image} />
+          <Image src={HowWeWorkImage} alt={"how_we_work.jpg"} className={styles.image} placeholder={"blur"}  />
         </div>
       </div>
     </Element>

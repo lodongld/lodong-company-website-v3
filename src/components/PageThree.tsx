@@ -26,7 +26,7 @@ export const PageThree: FunctionComponent = (): JSX.Element => {
 
       <div className="col-span-8">
         <div className="image-container">
-          <Image src={Photo} alt={"how_we_work.jpg"} className={styles.photo} />
+          <Image src={Photo} alt={"how_we_work.jpg"} className={styles.photo} placeholder={"blur"}  />
         </div>
       </div>
     </Element>

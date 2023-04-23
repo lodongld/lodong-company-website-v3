@@ -9,7 +9,7 @@ export const PageTwo: FunctionComponent = (): JSX.Element => {
     <Element name="about-us" className="grid items-center h-screen grid-cols-12 bg-black">
       <div className="col-span-8">
         <div className="image-container">
-          <Image src={Photo} alt={"how_we_work.jpg"} className={styles.photo} />
+          <Image src={Photo} alt={"how_we_work.jpg"} className={styles.photo} placeholder={"blur"}  />
         </div>
       </div>
 

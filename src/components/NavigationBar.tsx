@@ -1,9 +1,12 @@
 import React, { FunctionComponent, useCallback, useEffect } from "react";
 import Image from "next/image";
 import { Link, scroller, Events, animateScroll as scroll } from "react-scroll";
-import Logo from "./../img/lodong-logo.png";
+import LodongLogo from "./../img/lodong-logo.png";
+import HamburgerIcon from "./../img/menu.svg";
 
 export const NavigationBar: FunctionComponent = (): JSX.Element => {
+  const [collapse, setCollapse] = React.useState<boolean>(false);
+
   const scrollToTop = useCallback(() => {
     scroll.scrollToTop();
   }, []);
@@ -56,13 +59,13 @@ export const NavigationBar: FunctionComponent = (): JSX.Element => {
   }, []);
 
   return (
-    <nav className="absolute flex items-center justify-between w-full h-24 px-4 py-2 bg-transparent">
-      <div className="nav-start">
-        <Image src={Logo} className="w-20" alt={"lodong_logo.jpg"} />
+    <nav data-aos="fade-up" className="absolute flex items-center justify-between w-full h-24 px-4 py-2 bg-transparent">
+      <div className="w-[64px] h-[64px]">
+        <Image src={LodongLogo} alt={"lodong_logo.jpg"} className={"w-auto h-auto"} />
       </div>
 
-      <div className="flex items-center px-4 nav-end gap-x-16">
-        <div className="flex nav-group gap-x-5">
+      <div className="items-center hidden px-4 lg:flex nav-end gap-x-16">
+        <div className="flex flex-wrap nav-group gap-x-5">
           <div className="cursor-pointer nav-item">
             <Link activeClass="active" to="home" spy={true} smooth={true} duration={500}>Home</Link>
           </div>

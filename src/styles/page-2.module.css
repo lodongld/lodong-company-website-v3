@@ -1,4 +1,4 @@
 .photo {
-  @apply w-full rounded-tr-[3.5rem] rounded;
+  @apply w-full aspect-video rounded-tr-[3.5rem] rounded;
   filter: grayscale();
 }
