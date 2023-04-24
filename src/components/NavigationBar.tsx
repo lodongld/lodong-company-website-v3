@@ -2,11 +2,8 @@ import React, { FunctionComponent, useCallback, useEffect } from "react";
 import Image from "next/image";
 import { Link, scroller, Events, animateScroll as scroll } from "react-scroll";
 import LodongLogo from "./../img/lodong-logo.png";
-import HamburgerIcon from "./../img/menu.svg";
 
 export const NavigationBar: FunctionComponent = (): JSX.Element => {
-  const [collapse, setCollapse] = React.useState<boolean>(false);
-
   const scrollToTop = useCallback(() => {
     scroll.scrollToTop();
   }, []);
