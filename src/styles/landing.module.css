@@ -1,0 +1,14 @@
+.lodong {
+  font-size: 128.29px;
+  @apply text-red-500 stroke-2 stroke-white;
+}
+
+.header {
+  @apply text-white;
+  font-size: 34.64px;
+}
+
+.headerText {
+  font-size: 75px;
+  @apply font-bold text-white;
+}
