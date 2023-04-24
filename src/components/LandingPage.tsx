@@ -1,12 +1,20 @@
 import React, { FunctionComponent } from "react";
-import Image from "next/image";
 import { Element } from "react-scroll";
 import styles from "./../styles/landing.module.css";
+import Image from "next/image";
 import Photo from "./../img/team-looking-busy.jpg";
 
 export const LandingPage: FunctionComponent = (): JSX.Element => {
+  const styles = {
+    backgroundImage: `url(${Photo.src})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+  };
+
   return (
-    <Element name={"home"} className={`${styles.landing}`}>
+    <Element name={"home"} style={styles}>
       <div className="grid justify-between w-full h-screen grid-cols-1 grid-rows-3">
         <div className="row-span-1 row-start-2 mx-20">
           <div className="flex flex-col justify-center row-span-1 row-start-2 text-end gap-y-3">
