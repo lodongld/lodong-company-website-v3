@@ -1,60 +1,8 @@
-import React, { FunctionComponent, useCallback, useEffect } from "react";
+import React, { FunctionComponent } from "react";
 import Image from "next/image";
-import { Link, scroller, Events, animateScroll as scroll } from "react-scroll";
 import LodongLogo from "./../img/lodong-logo.png";
 
 export const NavigationBar: FunctionComponent = (): JSX.Element => {
-  const scrollToTop = useCallback(() => {
-    scroll.scrollToTop();
-  }, []);
-
-  const scrollTo = useCallback(() => {
-    scroller.scrollTo("scroll-to-element", {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuart"
-    });
-  }, []);
-
-  const scrollToWithContainer = useCallback(() => {
-    const goToContainer = new Promise<void>((resolve, reject) => {
-      Events.scrollEvent.register("end", () => {
-        resolve();
-        Events.scrollEvent.remove("end");
-      });
-
-      scroller.scrollTo("scroll-container", {
-        duration: 800,
-        delay: 0,
-        smooth: "easeInOutQuart"
-      });
-    });
-
-    goToContainer.then(() => {
-      scroller.scrollTo("scroll-container-second-element", {
-        duration: 800,
-        delay: 0,
-        smooth: "easeInOutQuart",
-        containerId: "scroll-container"
-      });
-    });
-  }, []);
-
-  useEffect(() => {
-    Events.scrollEvent.register("begin", function () {
-      console.log("begin", "arguments");
-    });
-
-    Events.scrollEvent.register("end", function () {
-      console.log("end", "arguments");
-    });
-
-    return () => {
-      Events.scrollEvent.remove("begin");
-      Events.scrollEvent.remove("end");
-    };
-  }, []);
-
   return (
     <nav className="absolute flex items-center justify-between w-full h-24 px-4 py-2 bg-transparent">
       <div className="w-[64px] h-[64px]">
@@ -64,33 +12,33 @@ export const NavigationBar: FunctionComponent = (): JSX.Element => {
       <div className="items-center hidden px-4 lg:flex nav-end gap-x-16">
         <div className="flex flex-wrap nav-group gap-x-5">
           <div className="cursor-pointer nav-item">
-            <Link activeClass="active" to="home" spy={true} smooth={true} duration={500}>Home</Link>
+            <a href="#home">Home</a>
           </div>
 
           <div className="cursor-pointer nav-item">
-            <Link activeClass="active" to="about-us" spy={true} smooth={true} duration={500}>About Us</Link>
+            <a href="#about-us">About Us</a>
           </div>
 
           <div className="cursor-pointer nav-item">
-            <Link activeClass="active" to="service" spy={true} smooth={true} duration={500}>Service</Link>
+            <a href="#service">Service</a>
           </div>
 
           <div className="cursor-pointer nav-item">
-            <Link activeClass="active" to="work" spy={true} smooth={true} duration={500}>Work</Link>
+            <a href="#work">Work</a>
           </div>
 
           <div className="cursor-pointer nav-item">
-            <Link activeClass="active" to="news" spy={true} smooth={true} duration={500}>News</Link>
+            <a href="#news">News</a>
           </div>
 
           <div className="cursor-pointer nav-item">
-            <Link activeClass="active" to="careers" spy={true} smooth={true} duration={500}>Careers</Link>
+            <a href="#careers">Careers</a>
           </div>
         </div>
 
-        <Link activeClass="active" to="contact" spy={true} smooth={true} duration={500}>
+        <a href="#contact">
           <button className="px-4 py-2 text-white bg-black rounded-full">Contact</button>
-        </Link>
+        </a>
       </div>
     </nav>
   );

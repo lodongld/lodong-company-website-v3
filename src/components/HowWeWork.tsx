@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from "react";
-import HowWeWorkImage from "./../img/how-we-work.jpg";
+import HowWeWorkImage from "./../img/how-we-work.png";
 import { RightImage } from "./Layout";
+import { motion } from "framer-motion";
 
 export const HowWeWork: FunctionComponent = (): JSX.Element => {
   return (
@@ -24,9 +25,9 @@ export const HowWeWork: FunctionComponent = (): JSX.Element => {
 
         <div>
           <div className="text-lg">
-            <p>하나를 말씀하시면 열을 아는 로동.</p>
-            <p>대표님들의 상상을 현실로 만들어드립니다.</p>
-            <p>완성도 높은 컨설팅, 완벽한 솔루션으로 증명합니다.</p>
+            <motion.p>하나를 말씀하시면 열을 아는 로동.</motion.p>
+            <motion.p>대표님들의 상상을 현실로 만들어드립니다.</motion.p>
+            <motion.p>완성도 높은 컨설팅, 완벽한 솔루션으로 증명합니다.</motion.p>
           </div>
         </div>
       </div>

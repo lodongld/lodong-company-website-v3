@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 
 const Document: FunctionComponent = (): JSX.Element => {
   return (
-    <Html lang="en">
+    <Html lang="ko">
       <Head />
 
       <body>

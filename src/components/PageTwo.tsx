@@ -1,8 +1,5 @@
 import React, { FunctionComponent } from "react";
-import Image from "next/image";
-import { Element } from "react-scroll";
 import Photo from "./../img/30fe171e1d75cbb169acafc36d461276.jpg";
-import styles from "./../styles/page-2.module.css";
 import { LeftImage } from "./Layout";
 
 export const PageTwo: FunctionComponent = (): JSX.Element => {

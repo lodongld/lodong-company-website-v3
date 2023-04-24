@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from "react";
-import { Element } from "react-scroll";
 import Photo from "./../img/7071cf963d13ddf4aa425ba18e0a8881.jpg";
 import { RightImage } from "./Layout";
 

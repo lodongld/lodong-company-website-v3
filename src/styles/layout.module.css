@@ -1,11 +1,9 @@
 .left {
-  @apply w-full aspect-auto rounded-tr-[3.5rem] rounded;
-  transform: scaleX(-1);
+  @apply w-full aspect-auto rounded-tl-[3.5rem] rounded;
   filter: grayscale();
 }
 
 .right {
-  @apply w-full aspect-auto rounded-tl-[3.5rem] rounded;
-  transform: scaleX(-1);
+  @apply w-full aspect-auto rounded-tr-[3.5rem] rounded;
   filter: grayscale();
 }
