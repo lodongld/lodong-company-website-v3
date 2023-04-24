@@ -13,7 +13,7 @@ export const LandingPage: FunctionComponent = (): JSX.Element => {
 
   return (
     <Element name={"home"} style={styles}>
-      <div className="grid justify-between w-full h-screen grid-cols-1 grid-rows-3">
+      <div data-aos="fade-up" className="grid justify-between w-full h-screen grid-cols-1 grid-rows-3">
         <div className="row-span-1 row-start-2 mx-20">
           <div className="flex flex-col justify-center row-span-1 row-start-2 text-end gap-y-3">
             <div className="text-5xl text-white">실패 경험 <span className="font-bold">ZERO</span></div>
