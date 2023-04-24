@@ -11,13 +11,8 @@ import { PageSix } from "@/components/PageSix";
 import { PageSeven } from "@/components/PageSeven";
 import { PageEight } from "@/components/PageEight";
 import { Footer } from "@/components/Footer";
-import AOS from "aos";
 
 const Home: FunctionComponent = (): JSX.Element => {
-  React.useEffect(() => {
-    AOS.init();
-  }, []);
-
   return (
     <Fragment>
       <Head>

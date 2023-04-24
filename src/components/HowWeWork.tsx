@@ -6,7 +6,7 @@ export const HowWeWork: FunctionComponent = (): JSX.Element => {
   return (
     <RightImage image={HowWeWorkImage} alt={""}>
       <div className="flex flex-col row-span-1 gap-5 text-2xl text-white">
-        <div data-aos="fade-up">
+        <div>
           <span className="mx-2 text-red-500">LODONG</span>
           <span className="mx-2">의 개발 프로세스</span>
         </div>

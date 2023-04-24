@@ -59,7 +59,7 @@ export const NavigationBar: FunctionComponent = (): JSX.Element => {
   }, []);
 
   return (
-    <nav data-aos="fade-up" className="absolute flex items-center justify-between w-full h-24 px-4 py-2 bg-transparent">
+    <nav className="absolute flex items-center justify-between w-full h-24 px-4 py-2 bg-transparent">
       <div className="w-[64px] h-[64px]">
         <Image src={LodongLogo} alt={"lodong_logo.jpg"} className={"w-auto h-auto"} />
       </div>
