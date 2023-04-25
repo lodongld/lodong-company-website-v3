@@ -1,6 +1,6 @@
 .lodong {
-  font-size: 128.29px;
-  @apply text-red-500 stroke-2 stroke-white;
+  @apply font-extrabold text-red-500 stroke-2 text-9xl stroke-white;
+  text-shadow: 10px -10px 10px #000000;
 }
 
 .header {
@@ -9,6 +9,5 @@
 }
 
 .headerText {
-  font-size: 75px;
-  @apply font-bold text-white;
+  @apply text-5xl font-bold leading-relaxed text-white;
 }

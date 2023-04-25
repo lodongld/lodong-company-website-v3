@@ -17,7 +17,8 @@ const Home: FunctionComponent = (): JSX.Element => {
     <Fragment>
       <Head>
         <meta charSet="UTF-8" />
-        <meta httpEquiv="X-UA-Compatible"/>
+        <meta httpEquiv="X-UA-Compatible" />
+        <meta name="google" content="notranslate" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Lodong</title>
       </Head>
