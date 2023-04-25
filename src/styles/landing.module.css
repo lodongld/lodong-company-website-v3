@@ -1,13 +1,21 @@
 .lodong {
-  @apply font-extrabold text-red-500 stroke-2 text-9xl stroke-white;
-  text-shadow: 10px -10px 10px #000000;
+  @apply text-[#fa2b2b] my-0 text-9xl;
+  font-weight: 700;
+  text-shadow: 10px -10px 0px #FFFFFF11;
+  letter-spacing: 0.0475em;
 }
 
 .header {
-  @apply text-white;
-  font-size: 34.64px;
+  @apply text-white text-4xl;
+  text-shadow: 0 0 5px #000000;
 }
 
 .headerText {
-  @apply text-5xl font-bold leading-relaxed text-white;
+  @apply text-5xl leading-relaxed text-white;
+  font-weight: 900;
+}
+
+.headerTextGray {
+  @apply text-5xl font-extrabold leading-relaxed text-[#6A6A6A];
+  font-weight: 900;
 }

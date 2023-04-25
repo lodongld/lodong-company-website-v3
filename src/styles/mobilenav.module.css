@@ -1,9 +1,0 @@
-.mobileNavbar {
-  position: absolute;
-  top: 16px;
-}
-
-.nav {
-  display: flex;
-  flex-direction: row;
-}

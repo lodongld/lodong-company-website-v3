@@ -12,13 +12,13 @@ interface LayoutProps {
 
 export const RightImage: FunctionComponent<LayoutProps> = (props: LayoutProps): JSX.Element => {
   return (
-    <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="grid items-center h-screen grid-cols-12 bg-black">
-      <div className="grid items-center justify-center h-screen grid-cols-1 col-span-4 grid-rows-2 mx-10">
+    <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} className={"grid items-center h-screen grid-cols-12 bg-black"}>
+      <div className={"grid items-center justify-center h-screen grid-cols-1 col-span-4 grid-rows-2 mx-10"}>
         {props.children}
       </div>
 
-      <div className="col-span-8">
-        <motion.div className="image-container">
+      <div className={"col-span-8"}>
+        <motion.div className={"image-container"}>
           <Image src={props.image} alt={props.alt} className={styles.left} placeholder={"blur"}  />
         </motion.div>
       </div>
@@ -28,14 +28,14 @@ export const RightImage: FunctionComponent<LayoutProps> = (props: LayoutProps): 
 
 export const LeftImage: FunctionComponent<LayoutProps> = (props: LayoutProps): JSX.Element => {
   return (
-    <section className="grid items-center h-screen grid-cols-12 bg-black">
-      <div className="col-span-8">
-        <div className="image-container">
+    <section className={"grid items-center h-screen grid-cols-12 bg-black"}>
+      <div className={"col-span-8"}>
+        <div className={"image-container"}>
           <Image src={props.image} alt={props.alt} className={styles.right} placeholder={"blur"}  />
         </div>
       </div>
 
-      <div className="grid items-center justify-center h-screen grid-cols-1 col-span-4 grid-rows-2 mx-10">
+      <div className={"grid items-center justify-center h-screen grid-cols-1 col-span-4 grid-rows-2 mx-10"}>
         {props.children}
       </div>
     </section>
