@@ -10,10 +10,10 @@ export const NavigationBar: FunctionComponent = (): JSX.Element => {
         <Image src={LodongIcon} alt={"lodong_icon"} className={"w-auto h-auto"} />
       </div>
 
-      <div className={"items-center hidden px-4 lg:flex nav-end gap-x-16"}>
+      <div className={"items-center hidden px-4 lg:flex nav-end gap-x-24"}>
         <div className={"flex flex-wrap nav-group gap-x-10"}>
-          <div className={"cursor-pointer nav-item"}>
-            <a href={"#home"}>Home</a>
+          <div className={"cursor-pointer nav-item text-xl"}>
+            <a href={"#home"} className={"font-bold"}>Home</a>
           </div>
 
           <div className={"cursor-pointer nav-item"}>
