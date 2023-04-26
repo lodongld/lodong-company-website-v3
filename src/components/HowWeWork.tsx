@@ -1,11 +1,15 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, RefObject } from "react";
 import HowWeWorkImage from "./../img/how-we-work.png";
 import { RightImage } from "./Layout";
 import { Paragraph } from "@/ts/Motion";
 
-export const HowWeWork: FunctionComponent = (): JSX.Element => {
+interface Props {
+  ref: RefObject<HTMLElement>;
+}
+
+export const HowWeWork: FunctionComponent<Props> = (props): JSX.Element => {
   return (
-    <RightImage image={HowWeWorkImage} alt={""}>
+    <RightImage image={HowWeWorkImage} alt={""} ref={props.ref}>
       <div className={"flex flex-col row-span-1 gap-5 text-2xl text-white"}>
         <div>
           <span className={"mx-2 text-red-500"}>LODONG</span>

@@ -1,7 +1,8 @@
+import React, { RefObject, useRef } from "react";
+import Head from "next/head";
+import { NextPage } from "next";
 import { LandingPage } from "@/components/LandingPage";
 import { NavigationBar } from "@/components/NavigationBar";
-import React, { Fragment, FunctionComponent } from "react";
-import Head from "next/head";
 import { HowWeWork } from "@/components/HowWeWork";
 import { PageTwo } from "@/components/PageTwo";
 import { PageThree } from "@/components/PageThree";
@@ -11,9 +12,10 @@ import { PageSix } from "@/components/PageSix";
 import { PageSeven } from "@/components/PageSeven";
 import { PageEight } from "@/components/PageEight";
 import { Footer } from "@/components/Footer";
-import { NextPage } from "next";
 
 const Home: NextPage = (): JSX.Element => {
+  const scrollRef: RefObject<HTMLElement> = useRef(null);
+
   return (
     <>
       <Head>
@@ -26,9 +28,9 @@ const Home: NextPage = (): JSX.Element => {
 
       <NavigationBar />
 
-      <LandingPage />
+      <LandingPage ref={scrollRef} />
 
-      <HowWeWork />
+      <HowWeWork ref={scrollRef} />
 
       <PageTwo />
 

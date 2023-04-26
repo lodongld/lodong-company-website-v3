@@ -50,7 +50,7 @@ export const LandingPage: FunctionComponent<Props> = (props): JSX.Element => {
 
           <Division className={"row-span-1 flex justify-between items-center"}>
             <Heading2 className={`${css.headerText}`}>Enhancing User Experience</Heading2>
-            <Image src={DownArrow} alt={"down-arrow.png"} className={css.downArrowIcon} />
+              <Image src={DownArrow} alt={"down-arrow.png"} className={css.downArrowIcon} />
           </Division>
         </Division>
       </div>

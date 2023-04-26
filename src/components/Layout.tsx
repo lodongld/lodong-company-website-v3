@@ -1,4 +1,4 @@
-import React, { FunctionComponent, ReactNode } from "react";
+import React, { RefObject, FunctionComponent, ReactNode } from "react";
 import { StaticImageData } from "next/image";
 import Image from "next/image";
 import styles from "./../styles/layout.module.css";
@@ -8,11 +8,13 @@ interface LayoutProps {
   image: StaticImageData;
   alt: string;
   children: ReactNode;
+  id?: string;
+  ref?: RefObject<HTMLElement>
 }
 
 export const RightImage: FunctionComponent<LayoutProps> = (props: LayoutProps): JSX.Element => {
   return (
-    <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} className={"grid items-center h-screen grid-cols-12 bg-black"}>
+    <motion.section ref={props.ref} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className={"grid items-center h-screen grid-cols-12 bg-black"}>
       <div className={"grid items-center justify-center h-screen grid-cols-1 col-span-4 grid-rows-2 mx-10"}>
         {props.children}
       </div>
