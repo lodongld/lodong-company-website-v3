@@ -25,11 +25,18 @@ export const LandingPage: FunctionComponent = (): JSX.Element => {
           </Division>
         </div>
 
-        <Division className={"flex flex-col justify-center row-span-1 row-start-3 px-10 bg-opacity-50 lg:px-16 bg-neutral-900"}>
-          <Division>
-            <Heading1 className={css.headerText}>We Develop Innovative</Heading1>
-            <Heading1 className={css.headerTextGray}>Digital Solutions</Heading1>
-            <Heading1 className={css.headerText}>Enhancing User Experience</Heading1>
+        <Division className={css.description}>
+          <Division className={"row-span-1"}>
+            <Heading2 className={`${css.headerText}`}>We Develop Innovative</Heading2>
+          </Division>
+
+          <Division className={"row-span-1"}>
+            <Heading2 className={`${css.headerTextGray}`}>Digital Solutions</Heading2>
+          </Division>
+
+          <Division className={"row-span-1 flex justify-between items-center"}>
+            <Heading2 className={`${css.headerText}`}>Enhancing User Experience</Heading2>
+            <Image src={DownArrow} alt={"down-arrow.png"} className={css.downArrowIcon} />
           </Division>
         </Division>
       </div>
