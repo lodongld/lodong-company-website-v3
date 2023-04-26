@@ -1,7 +1,9 @@
 import React, { FunctionComponent } from "react";
+import Image from "next/image";
 import Photo from "./../img/team-looking-busy.jpg";
 import css from "./../styles/landing.module.css";
-import { Division, Heading1 } from "@/ts/Motion";
+import { Division, Heading2 } from "@/ts/Motion";
+import DownArrow from "./../img/Vector.png";
 
 export const LandingPage: FunctionComponent = (): JSX.Element => {
   const styles = {
