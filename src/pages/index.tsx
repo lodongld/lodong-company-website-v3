@@ -11,10 +11,11 @@ import { PageSix } from "@/components/PageSix";
 import { PageSeven } from "@/components/PageSeven";
 import { PageEight } from "@/components/PageEight";
 import { Footer } from "@/components/Footer";
+import { NextPage } from "next";
 
-const Home: FunctionComponent = (): JSX.Element => {
+const Home: NextPage = (): JSX.Element => {
   return (
-    <Fragment>
+    <>
       <Head>
         <meta charSet={"UTF-8"} />
         <meta httpEquiv={"X-UA-Compatible"} />
@@ -44,7 +45,7 @@ const Home: FunctionComponent = (): JSX.Element => {
       <PageEight />
 
       <Footer />
-    </Fragment >
+    </>
   );
 };
 
