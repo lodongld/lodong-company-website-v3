@@ -1,21 +1,45 @@
 .lodong {
-  @apply text-[#fa2b2b] my-0 text-9xl;
+  font-size: 128.29px;
   font-weight: 700;
-  text-shadow: 10px -10px 0px #FFFFFF11;
-  letter-spacing: 0.0475em;
+  text-shadow: 10px -10px 0px #ffffff11;
+  letter-spacing: 0px;
+  line-height: 1.4;
+  margin-top: -28px;
+  @apply text-[#fa2b2b] my-0;
 }
 
 .header {
-  @apply text-white text-4xl;
   text-shadow: 0 0 5px #000000;
+  @apply text-4xl text-white;
 }
 
 .headerText {
-  @apply text-5xl leading-relaxed text-white;
-  font-weight: 900;
+  font-size: 60px;
+  font-weight: 700;
+  @apply text-white;
 }
 
 .headerTextGray {
-  @apply text-5xl font-extrabold leading-relaxed text-[#6A6A6A];
-  font-weight: 900;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 2.5;
+  @apply font-extrabold leading-relaxed text-[#6A6A6A];
+}
+
+.downArrow {
+  display: flex;
+  flex-direction: column;
+}
+
+.downArrowContainer {
+  align-self: end;
+  @apply h-16;
+}
+
+.downArrowIcon {
+  height: 100%;
+}
+
+.description {
+  @apply grid items-center grid-cols-1 row-span-2 row-start-3 px-16 bg-opacity-50 bg-neutral-900;
 }
