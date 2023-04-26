@@ -1,11 +1,15 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, Ref, RefObject } from "react";
 import Image from "next/image";
 import Photo from "./../img/team-looking-busy.jpg";
 import css from "./../styles/landing.module.css";
 import { Division, Heading2 } from "@/ts/Motion";
 import DownArrow from "./../img/Vector.png";
 
-export const LandingPage: FunctionComponent = (): JSX.Element => {
+interface Props {
+  ref: RefObject<HTMLElement>;
+}
+
+export const LandingPage: FunctionComponent<Props> = (props): JSX.Element => {
   const styles = {
     backgroundImage: `url(${Photo.src})`,
     backgroundPosition: "center",
@@ -13,6 +17,16 @@ export const LandingPage: FunctionComponent = (): JSX.Element => {
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",
   };
+
+  const handleScroll = (ref: RefObject<HTMLElement>) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  React.useEffect(() => {
+    if (window.location.hash === "#how-we-work") {
+      props.ref.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [props.ref]);
 
   return (
     <section style={styles}>
